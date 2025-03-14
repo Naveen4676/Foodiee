@@ -176,8 +176,8 @@ document.getElementById("apply-coupon").addEventListener("click", function () {
     let totalPrice = parseInt(totalPriceEl.textContent.replace("Total: ₹", ""));
 
     const validCoupons = {
-        "FOODIEE20": 10,  // 10% Discount
-        "FOODIEE50": 15   // 15% Discount
+        "FOODIEE10": 10,  // 10% Discount
+        "FOODIEE15": 15   // 15% Discount
     };
 
     if (validCoupons[couponInput]) {
