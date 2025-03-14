@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIEE - Taste the Best</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="FOODIEE Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#" class="order-btn"><i class="fas fa-shopping-cart"></i> My Cart <span id="cart-count"></span></a></li>
+                <button id="toggle-theme" class="buttons">🌙 Dark Mode</button>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fast & Tasty Food, Served Hot!</h1>
+            <p>Delight in every bite with our freshly made burgers, pizzas, and fries.</p>
+            <a href="#menu" class="btn"><i class="fas fa-utensils"></i> Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2><i class="fas fa-hamburger"></i> Our Specialties</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="cheeseburger.webp" alt="Cheeseburger">
+                <h3>Ultimate Beef Burger</h3>
+                <p>Thick and juicy burger with fresh veggies and secret sauce.</p>
+                <span>₹249</span>
+                <button class="add-to-cart" data-name="Burger" data-price="249">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Burger">❤️</button>
+            </div>
+            <div class="menu-item">
+                <img src="pepperoni pizza.webp" alt="Pepperoni Pizza">
+                <h3>Cheesy Margherita Pizza</h3>
+                <p>Classic Italian pizza with fresh mozzarella and basil.</p>
+                <span>₹399</span>
+                <button class="add-to-cart" data-name="Cheesy Margherita Pizza" data-price="399">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Cheesy Margherita Pizza">❤️</button>
+
+            </div>
+            <div class="menu-item">
+                <img src="chessy pizza.webp" alt="Cheesy Pizza">
+                <h3>Cheesy Overload Pizza</h3>
+                <p>Loaded with extra cheese and delicious toppings.</p>
+                <span>₹459</span>
+                <button class="add-to-cart" data-name="Cheesy Overload Pizza" data-price="459">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Cheesy Overload Pizza">❤️</button>
+
+            </div>
+
+            <div class="menu-item">
+                <img src="bucketchicken.webp" alt="Bucket Chicken">
+                <h3>Spicy Chicken Bucket</h3>
+                <p>Crispy and spicy fried chicken pieces.</p>
+                <span>₹599</span>
+                <button class="add-to-cart" data-name="Spicy Chicken Bucket" data-price="599">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Spicy Chicken Bucket">❤️</button>
+
+            </div>
+            <div class="menu-item">
+                <img src="chillichicken.webp" alt="Chilli Chicken">
+                <h3>Chilli Chicken</h3>
+                <p>Hot and spicy Chinese-style chicken.</p>
+                <span>₹349</span>
+                <button class="add-to-cart" data-name="Chilli Chicken" data-price="349">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Chilli Chicken">❤️</button>
+
+            </div>
+            <div class="menu-item">
+                <img src="gourmentburger.webp" alt="Gourmet Burger">
+                <h3>Gourmet Burger</h3>
+                <p>Premium burger with a juicy patty and exotic sauces.</p>
+                <span>₹299</span>
+                <button class="add-to-cart" data-name="Gourmet Burger" data-price="299">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Gourmet Burger">❤️</button>
+
+            </div>
+            <div class="menu-item">
+                <img src="crispy frenchfries.webp" alt="Crispy French Fries">
+                <h3>Crispy French Fries</h3>
+                <p>Golden and crispy fries served with tangy dip.</p>
+                <span>₹149</span>
+                <button class="add-to-cart" data-name="Crispy French Fries" data-price="149">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Crispy French Fries">❤️</button>
+
+            </div>
+            <div class="menu-item">
+                <img src="grilledchickenwings.webp" alt="Grilled Chicken Wings">
+                <h3>Grilled Chicken Wings</h3>
+                <p>Perfectly grilled chicken wings with BBQ sauce.</p>
+                <span>₹299</span>
+                <button class="add-to-cart" data-name="Grilled Chicken Wings" data-price="299">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Grilled Chicken Wings">❤️</button>
+
+            </div>
+
+        <div class="menu-item">
+            <img src="chicken meal coslaw and fries.webp" alt="Chicken Meal">
+            <h2>Chicken Meal with Coleslaw & Fries</h2>
+            <p>A delicious crispy chicken meal served with fresh coleslaw and golden fries.</p>
+            <span>₹249</span>
+            <button class="add-to-cart" data-name="Chicken Meal with Coleslaw & Fries" data-price="249">Add to Cart</button>
+            <button class="add-to-favorites" data-name="Chicken Meal with Coleslaw & Fries">❤️</button>
+
+        </div>
+
+        <div class="menu-item">
+            <img src="chocolate milkshake.webp" alt="Chocolate Milkshake">
+            <h2>Chocolate Milkshake</h2>
+            <p>A rich, creamy chocolate milkshake topped with whipped cream and chocolate drizzle.</p>
+            <span>₹179</span>
+            <button class="add-to-cart" data-name="Chocolate Milkshake" data-price="179">Add to Cart</button>
+            <button class="add-to-favorites" data-name="Chocolate Milkshake">❤️</button>
+
+        </div>
+
+        <div class="menu-item">
+            <img src="crispy fried chicken strips.webp" alt="Fried Chicken Strips">
+            <h2>Crispy Fried Chicken Strips</h2>
+            <p>Juicy, tender chicken strips coated in a crunchy golden batter, served with a dip.</p>
+            <span>₹199</span>
+            <button class="add-to-cart" data-name="Crispy Fried Chicken Strips" data-price="199">Add to Cart</button>
+            <button class="add-to-favorites" data-name="Crispy Fried Chicken Strips">❤️</button>
+
+        </div>
+
+        <div class="menu-item">
+            <img src="gourment sandwitch.webp" alt="Gourmet Sandwich">
+            <h2>Gourmet Sandwich</h2>
+            <p>A premium sandwich loaded with fresh veggies, cheese, and a flavorful sauce.</p>
+            <span>₹229</span>
+            <button class="add-to-cart" data-name="Gourmet Sandwich" data-price="229">Add to Cart</button>
+            <button class="add-to-favorites" data-name="Gourmet Sandwich">❤️</button>
+
+        </div>
+
+        <div class="menu-item">
+            <img src="mozzarella sticks.webp" alt="Mozzarella Sticks">
+            <h2>Mozzarella Sticks</h2>
+            <p>Crispy on the outside, gooey on the inside—cheesy perfection in every bite!</p>
+            <span>₹149</span>
+            <button class="add-to-cart" data-name="Mozzarella Sticks" data-price="149">Add to Cart</button>
+            <button class="add-to-favorites" data-name="Mozzarella Sticks">❤️</button>
+
+        </div>
+
+        <div class="menu-item">
+            <img src="straberry milkshake.webp" alt="Strawberry Milkshake">
+            <h2>Strawberry Milkshake</h2>
+            <p>A refreshing blend of strawberries and creamy milk, topped with whipped cream.</p>
+            <span>₹179</span>
+            <button class="add-to-cart" data-name="Strawberry Milkshake" data-price="179">Add to Cart</button>
+            <button class="add-to-favorites" data-name="Strawberry Milkshake">❤️</button>
+
+        </div>
+        <div class="menu-item">
+            <img src="crispynugget.webp" alt="Grilled Chicken Wings">
+            <h3>Golden Crispy Nuggets</h3>
+            <p>perfectly seasoned and irresistibly crunchy! Grab a bite of pure deliciousness..</p>
+            <span>₹149</span>
+            <button class="add-to-cart" data-name="Golden Crispy Nuggets" data-price="149">Add to Cart</button>
+            <button class="add-to-favorites" data-name="Golden Crispy Nuggets">❤️</button>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- Drinks Section -->
+    <section id="drinks" class="menu-section">
+        <h2>🥤 Drinks</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="cola drink.webp" alt="Cola Drink">
+                <h3>Classic Cola</h3>
+                <p>Refreshing and fizzy cola drink to quench your thirst.</p>
+                <span>₹99</span>
+                <button class="add-to-cart" data-name="Classic Cola" data-price="99">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Classic Cola">❤️</button>
+
+            </div>
+           <div class="menu-item">
+         <img src="lemon soda.webp" alt="Lemon Soda">
+         <h3>Lemon Soda</h3>
+         <p>Chilled and tangy lemon soda, perfect for summer.</p>
+         <span>₹89</span>
+         <button class="add-to-cart" data-name="Lemon Soda" data-price="89">Add to Cart</button>
+         <button class="add-to-favorites" data-name="Lemon Soda">❤️</button>
+
+     </div>
+     <div class="menu-item">
+         <img src="orange soda.webp" alt="Orange Soda">
+         <h3>Orange Soda</h3>
+         <p>Bursting with the refreshing taste of oranges.</p>
+         <span>₹95</span>
+         <button class="add-to-cart" data-name="Orange Soda" data-price="95">Add to Cart</button>
+         <button class="add-to-favorites" data-name="Orange Soda">❤️</button>
+
+     </div>
+     <div class="menu-item">
+         <img src="berry soda.webp" alt="Berry Soda">
+         <h3>Berry Soda</h3>
+         <p>Sweet and tangy soda infused with mixed berries.</p>
+         <span>₹109</span>
+         <button class="add-to-cart" data-name="Berry Soda" data-price="109">Add to Cart</button>
+         <button class="add-to-favorites" data-name="Berry Soda">❤️</button>
+
+
+     </div>
+     <div class="menu-item">
+         <img src="classic root beer.webp" alt="Classic Root Beer">
+         <h3>Classic Root Beer</h3>
+         <p>A timeless, rich, and creamy root beer experience.</p>
+         <span>₹119</span>
+         <button class="add-to-cart" data-name="Classic Root Beer" data-price="119">Add to Cart</button>
+         <button class="add-to-favorites" data-name="Classic Root Beer">❤️</button>
+
+
+     </div>
+        </div>
+    </section>
+      <section id="combos" class="menu-section">
+        <h2>🍽️ Combos</h2>
+        <div class="combo">
+        <div class="menu-container">
+            <div class="menu-item">
+                
+                <img src="familycombo.webp" alt="Family Combo">
+                <h3>Family Combo</h3>
+                <p>Perfect meal for the whole family, includes Pizza,fries, crispy chicken pieces and drinks.</p>
+                <span>₹1299</span>
+                <button class="add-to-cart" data-name="Family Combo" data-price="1299">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Friends Combo">❤️</button>
+
+
+            </div>
+            <div class="menu-item">
+                <img src="friends combo.webp" alt="Friends Combo">
+                <h3>Friends Combo</h3>
+                <p>A great sharing meal with Burger, chicken wings,grilled chicken pieces and sodas.</p>
+                <span>₹1199</span>
+                <button class="add-to-cart" data-name="Friends Combo" data-price="1199">Add to Cart</button>
+                <button class="add-to-favorites" data-name="Friends Combo">❤️</button>
+           </div>
+        </div>
+    </div>
+    </section>
+    </section>
+       <!-- Cart Section -->
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-price">Total: ₹0</p>
+        <button id="clear-cart">Clear Cart</button>
+        <button id="order-now">Order Now</button>
+        <section id="discount">
+            <h3>🎉 Apply Coupon</h3>
+            <input type="text" id="coupon-input" placeholder="Enter Coupon Code">
+            <button id="apply-coupon">Apply</button>
+            <p id="discount-message"></p>
+        </section>     
+    </section>
+<!-- Favorites Section -->
+<section id="favorites" class="menu-section">
+    <h2>❤️ Your Favorite Foods</h2>
+    <div id="favorites-list"></div>
+    <button id="clear-favorites">Clear All Favorites</button>
+</section>
+<!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2><i class="fas fa-info-circle"></i> Why Choose FOODIEE?</h2>
+            <p>
+                "At FOODIEE, every bite tells a story! We craft our dishes using the freshest ingredients, rich flavors, and a passion for delicious food. Whether you're craving a cheesy pizza, a juicy burger, or a refreshing drink, we serve happiness on every plate!"<br>
+                
+                👉 Fresh Ingredients | Bold Flavors | Unforgettable Taste
+                
+.</p>
+            <a href="#menu" class="btn"><i class="fas fa-utensils"></i> View Menu</a>
+        </div>
+        <div class="about-image">
+            <img src="foodie.webp" alt="About FOODIEE">
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-form">
+            <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+            <form action="https://submit-form.com/zEFHqnflj">
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message"><i class="fas fa-comment"></i> Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+            </form>
+        </div>
+        <div class="contact-image">
+            <img src="location.webp" alt="Location Map">
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <!-- Footer -->
+<footer>
+    <p>&copy; 2025 FOODIEE. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
